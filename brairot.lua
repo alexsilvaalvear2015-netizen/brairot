@@ -1,4 +1,4 @@
--- BRAIROT HUB - DUPLICAR + SPEED + INFINITE JUMP
+-- BRAIROT HUB COMPLETO
 
 local player = game.Players.LocalPlayer
 local UIS = game:GetService("UserInputService")
@@ -20,23 +20,23 @@ toggle.TextColor3 = Color3.new(1,1,1)
 toggle.Active = true
 toggle.Draggable = true
 
-local s1 = Instance.new("UIStroke", toggle)
-s1.Color = Color3.fromRGB(255,0,0)
-s1.Thickness = 2
+local strokeToggle = Instance.new("UIStroke", toggle)
+strokeToggle.Color = Color3.fromRGB(255,0,0)
+strokeToggle.Thickness = 2
 
 -- FRAME MENÚ
 local frame = Instance.new("Frame")
 frame.Parent = gui
-frame.Size = UDim2.new(0, 180, 0, 160)
+frame.Size = UDim2.new(0, 180, 0, 170)
 frame.Position = UDim2.new(0, 50, 0, 250)
 frame.BackgroundColor3 = Color3.fromRGB(40,40,40)
 frame.Visible = false
 frame.Active = true
 frame.Draggable = true
 
-local s2 = Instance.new("UIStroke", frame)
-s2.Color = Color3.fromRGB(255,0,0)
-s2.Thickness = 2
+local strokeFrame = Instance.new("UIStroke", frame)
+strokeFrame.Color = Color3.fromRGB(255,0,0)
+strokeFrame.Thickness = 2
 
 -- BOTÓN DUPLICAR
 local dup = Instance.new("TextButton")
@@ -46,9 +46,9 @@ dup.Position = UDim2.new(0, 10, 0, 10)
 dup.Text = "Duplicar"
 dup.BackgroundColor3 = Color3.fromRGB(200,200,200)
 
-local s3 = Instance.new("UIStroke", dup)
-s3.Color = Color3.fromRGB(255,0,0)
-s3.Thickness = 2
+local strokeDup = Instance.new("UIStroke", dup)
+strokeDup.Color = Color3.fromRGB(255,0,0)
+strokeDup.Thickness = 2
 
 -- BOTÓN VELOCIDAD
 local speedBtn = Instance.new("TextButton")
@@ -58,21 +58,21 @@ speedBtn.Position = UDim2.new(0, 10, 0, 55)
 speedBtn.Text = "Subir Velocidad"
 speedBtn.BackgroundColor3 = Color3.fromRGB(200,200,200)
 
-local s4 = Instance.new("UIStroke", speedBtn)
-s4.Color = Color3.fromRGB(255,0,0)
-s4.Thickness = 2
+local strokeSpeed = Instance.new("UIStroke", speedBtn)
+strokeSpeed.Color = Color3.fromRGB(255,0,0)
+strokeSpeed.Thickness = 2
 
 -- BOTÓN INFINITE JUMP
 local jumpBtn = Instance.new("TextButton")
 jumpBtn.Parent = frame
 jumpBtn.Size = UDim2.new(0, 160, 0, 35)
 jumpBtn.Position = UDim2.new(0, 10, 0, 100)
-jumpBtn.Text = "Infinite Jump"
+jumpBtn.Text = "Infinite Jump OFF"
 jumpBtn.BackgroundColor3 = Color3.fromRGB(200,200,200)
 
-local s5 = Instance.new("UIStroke", jumpBtn)
-s5.Color = Color3.fromRGB(255,0,0)
-s5.Thickness = 2
+local strokeJump = Instance.new("UIStroke", jumpBtn)
+strokeJump.Color = Color3.fromRGB(255,0,0)
+strokeJump.Thickness = 2
 
 -- ABRIR / CERRAR
 toggle.MouseButton1Click:Connect(function()
